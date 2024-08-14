@@ -31,5 +31,13 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ vars.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          DB_KEY: ${{ secrets.DB_KEY }}
+          DB_URI: ${{ secrets.DB_URI }}
+          DB_ALGORITHM: ${{ vars.DB_ALGORITHM }}
+          DB_HOST: ${{ vars.DB_HOST }}
+          DB_USER: ${{ vars.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_DATABASE: ${{ vars.DB_DATABASE }}
+          DB_DATABASEUSERS: ${{ vars.DB_DATABASEUSERS }}
         run: |
           zappa update --no_venv
